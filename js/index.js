@@ -56,10 +56,35 @@ navLinks.forEach((item, index) => (item.textContent = siteContent['nav'][`nav-it
 let myString = 'DOM\n Is\n Awesome';
 const ctaHOne = document.querySelector('.cta-text h1');
 ctaHOne.innerText = myString;
-console.log(ctaHOne);
+// console.log(ctaHOne);
 
 const ctaImg = document.getElementById('cta-img');
 ctaImg.src = siteContent['cta']['img-src'];
 
 const ctaBtn = document.querySelector('.cta-text button');
 ctaBtn.textContent = 'Get Started';
+
+// main content
+// top content
+const topHFour = document.querySelectorAll('.top-content .text-content h4');
+const topContent = document.querySelectorAll('.top-content .text-content p');
+topHFour[0].textContent = siteContent['main-content']['features-h4'];
+topHFour[1].textContent = siteContent['main-content']['about-h4'];
+topContent[0].textContent = siteContent['main-content']['features-content'];
+topContent[1].textContent = siteContent['main-content']['about-content'];
+// console.log(topHFour);
+// console.log(topContent);
+
+// middle img
+const middleImg = document.getElementById('middle-img');
+middleImg.src = siteContent['main-content']['middle-img-src'];
+
+//bottom content
+const botHFour = document.querySelectorAll('.bottom-content .text-content h4');
+const botContent = document.querySelectorAll('.bottom-content .text-content p');
+botHFour[0].textContent = siteContent['main-content']['services-h4'];
+botHFour[1].textContent = siteContent['main-content']['product-h4'];
+botHFour[2].textContent = siteContent['main-content']['vision-h4'];
+botContent[0].textContent = siteContent['main-content']['services-content'];
+botContent[1].textContent = siteContent['main-content']['product-content'];
+botContent[2].textContent = siteContent['main-content']['vision-content'];
