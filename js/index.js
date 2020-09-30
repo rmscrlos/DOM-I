@@ -47,7 +47,6 @@ let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
 //nav
-
 let navLinks = document.querySelectorAll('a');
 navLinks.forEach((item, index) => (item.textContent = siteContent['nav'][`nav-item-${index + 1}`]));
 // console.log(navLinks);
@@ -101,3 +100,18 @@ contactPs[2].textContent = siteContent['contact']['email'];
 // footer
 const foot = document.querySelector('footer p');
 foot.textContent = siteContent['footer']['copyright'];
+
+// append and prepend
+const appnd = document.createElement('a');
+appnd.setAttribute('href', '#');
+appnd.textContent = 'Appended';
+console.log(appnd);
+
+const prepnd = document.createElement('a');
+prepnd.setAttribute('href', '#');
+prepnd.textContent = 'Prepended';
+console.log(prepnd);
+
+const nav = document.querySelector('nav');
+nav.prepend(prepnd);
+nav.append(appnd);
