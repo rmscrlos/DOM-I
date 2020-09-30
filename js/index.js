@@ -88,3 +88,12 @@ botHFour[2].textContent = siteContent['main-content']['vision-h4'];
 botContent[0].textContent = siteContent['main-content']['services-content'];
 botContent[1].textContent = siteContent['main-content']['product-content'];
 botContent[2].textContent = siteContent['main-content']['vision-content'];
+
+// contact section
+const contactHFour = document.querySelector('.contact h4');
+const contactPs = document.querySelectorAll('.contact p');
+contactHFour.textContent = siteContent['contact']['contact-h4'];
+
+contactPs[0].textContent = siteContent['contact']['address'];
+contactPs[1].textContent = siteContent['contact']['phone'];
+contactPs[2].textContent = siteContent['contact']['email'];
