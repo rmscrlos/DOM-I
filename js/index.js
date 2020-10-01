@@ -105,7 +105,7 @@ foot.textContent = siteContent['footer']['copyright'];
 const appnd = document.createElement('a');
 appnd.setAttribute('href', '#');
 appnd.textContent = 'Appended';
-console.log(appnd);
+// console.log(appnd);
 
 const prepnd = document.createElement('a');
 prepnd.setAttribute('href', '#');
@@ -114,4 +114,32 @@ console.log(prepnd);
 
 const nav = document.querySelector('nav');
 nav.prepend(prepnd);
-nav.append(appnd);
+// nav.append(appnd);
+
+//stretch - dark mode
+const head = document.querySelector('head');
+// console.log(head);
+const darkMode = document.createElement('style');
+head.appendChild(darkMode);
+
+const modeBtn = document.createElement('button');
+console.log(modeBtn);
+modeBtn.textContent = 'Dark/light';
+
+//fixing problem with border after click
+// const main = document.querySelector('.main-content');
+// main.style.borderTop = '2px solid #000';
+// main.style.borderBotttom = '2px solid #000';
+
+modeBtn.addEventListener('click', function() {
+	darkMode.innerHTML =
+		'.dark-mode {background: #000; color: #fff;} #logo-img{background: #fff;} .main-content{border-bottom: 2px solid #fff !important; border-top: 2px solid #fff; !important}';
+	let body = document.querySelector('body');
+	body.classList.toggle('dark-mode');
+	if (body.className === '') {
+		darkMode.innerHTML = '';
+	}
+});
+
+// append modeBtn
+nav.append(modeBtn);
